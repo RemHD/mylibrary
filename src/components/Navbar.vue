@@ -1,14 +1,10 @@
 <template>
-  <nav class="navbar">
-    <ul class="navbar-nav">
-      <li>
-        <router-link to="/" class="nav-link">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/about" class="nav-link">About</router-link>
-      </li>
-      <!-- Ajoute d'autres éléments de navigation ici -->
-    </ul>
+  <nav class="flex bg-gray-200 items-center px-4">
+    <div class="flex items-center space-x-4">
+      <img src="./../assets/logo-no-background.svg" width="32" height="32" alt="logo" />
+      <router-link to="/" class="text-gray-800 hover:text-gray-600">Home</router-link>
+      <router-link to="/about" class="text-gray-800 hover:text-gray-600">About</router-link>
+    </div>
   </nav>
 </template>
 
@@ -20,30 +16,3 @@ export default defineComponent({
   name: 'Navbar'
 })
 </script>
-
-<style>
-.navbar {
-  background-color: #333;
-  overflow: hidden;
-}
-
-.navbar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.nav-link {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  background-color: #555;
-}
-</style>
